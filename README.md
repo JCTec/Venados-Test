@@ -21,8 +21,11 @@ Este es un proyecto prueba para Da Codes del equipo de futbol Venados.
 - Modelos
 
 -- Game: Modelo que descarga el calendario de juegos del servidor y lo guarda como un arreglo.
+
 -- Statistic: Modelo que descarga la tabla de posiciones del servidor y la guarda como un arreglo.
+
 -- Team: Es una clase que tiene a los entrenadores, los porteros, los centros, los defensas y los delanteros. Esta clase igual cuenta con una clase que te deja acceder a los diferentes arreglos convenientemente con un index de 0-4.
+
 
 ## Installation:
 - Git Clone or Descarga el proyecto.
