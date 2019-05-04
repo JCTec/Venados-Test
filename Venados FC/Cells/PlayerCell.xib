@@ -1,10 +1,54 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="playerCell" reuseIdentifier="playerCell" id="0EI-aZ-yab" customClass="PlayerCollectionViewCell" customModule="Venados_FC" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="301" height="237"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="301" height="237"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yIV-rB-bTs" customClass="CircleImageView" customModule="Venados_FC" customModuleProvider="target">
+                        <rect key="frame" x="105.5" y="20" width="90" height="90"/>
+                        <color key="backgroundColor" red="0.4549019608" green="0.67843137249999996" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="BqB-TI-HFw"/>
+                            <constraint firstAttribute="height" constant="90" id="p7g-HS-IJg"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carlos Vela Defensa" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhM-OM-BPs">
+                        <rect key="frame" x="74" y="120" width="153.5" height="117"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="EhM-OM-BPs" firstAttribute="top" secondItem="yIV-rB-bTs" secondAttribute="bottom" constant="10" id="Emx-RQ-WA7"/>
+                <constraint firstItem="yIV-rB-bTs" firstAttribute="top" secondItem="0EI-aZ-yab" secondAttribute="top" constant="20" id="VbP-SM-kK4"/>
+                <constraint firstItem="yIV-rB-bTs" firstAttribute="centerX" secondItem="0EI-aZ-yab" secondAttribute="centerX" id="XLj-JH-VSj"/>
+                <constraint firstItem="EhM-OM-BPs" firstAttribute="centerX" secondItem="0EI-aZ-yab" secondAttribute="centerX" id="qLY-iE-mU1"/>
+                <constraint firstAttribute="bottom" secondItem="EhM-OM-BPs" secondAttribute="bottom" id="qgq-5g-6Jr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="546-Ak-Phf"/>
+            <size key="customSize" width="301" height="237"/>
+            <connections>
+                <outlet property="centerLabel" destination="EhM-OM-BPs" id="t1m-XL-iMR"/>
+                <outlet property="imagePlayer" destination="yIV-rB-bTs" id="vAl-4s-u3x"/>
+            </connections>
+            <point key="canvasLocation" x="141.30434782608697" y="95.424107142857139"/>
+        </collectionViewCell>
     </objects>
 </document>

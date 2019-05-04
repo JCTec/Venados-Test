@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import UIKit
+
+class CircleImageView: UIImageView {
+    override func awakeFromNib() {
+        self.setRounded()
+    }
+}

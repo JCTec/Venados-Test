@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+extension Dictionary {
+    
+    func getGamesFrom(index i:Int) -> [Game]{
+        return self[Array(self.keys)[i]] as! [Game]
+    }
+    
+    func getStringFrom(index i:Int) -> String{
+        return self[Array(self.keys)[i]] as! String
+    }
+    
+    func getIntFrom(index i:Int) -> Int{
+        return self[Array(self.keys)[i]] as! Int
+    }
+}

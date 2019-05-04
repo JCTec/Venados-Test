@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import UIKit
+
+extension String {
+    func loadNib(bundle: Bundle? = nil) -> UINib? {
+        return UINib(nibName: self, bundle: bundle)
+    }
+}

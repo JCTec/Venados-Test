@@ -40,7 +40,7 @@ class Statistics {
             
             do{
                 try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
-                let statistics = try JSONDecoder().decode(StatisticRequest.self, from: data!)
+                let statistics = try JSONDecoder().decode(statisticRequest.self, from: data!)
                 
                 self.statistics.removeAll()
                 self.statistics = statistics.data.statistics

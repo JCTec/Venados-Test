@@ -45,7 +45,7 @@ class GameManager {
             
             do{
                 try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
-                let games = try JSONDecoder().decode(Games.self, from: data!)
+                let games = try JSONDecoder().decode(gamesRequest.self, from: data!)
                 self.games.removeAll()
                 
                 if(order){

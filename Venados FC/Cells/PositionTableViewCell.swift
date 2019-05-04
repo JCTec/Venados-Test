@@ -21,6 +21,8 @@ class PositionTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.backgroundColor = UIColor.Venados.Green.light
     
         // Initialization code
     }

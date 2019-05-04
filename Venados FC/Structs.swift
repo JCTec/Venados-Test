@@ -8,35 +8,93 @@
 
 import Foundation
 
-struct Games: Decodable {
+let Base_URL = "https://venados.dacodes.mx"
+
+struct playerRequest: Decodable{
     var success: Bool!
-    var code: Int!
-    var data: data!
+    var data: dataPlayers!
 }
 
-struct StatisticRequest: Decodable {
-    var success: Bool!
+struct dataPlayers: Decodable{
+    var team: Team!
     var code: Int!
+}
+
+struct Person: Decodable{
+    var name: String!
+    var first_surname: String!
+    var second_surname: String!
+    var birthday: String!
+    var birth_place: String!
+    var weight: Double!
+    var height: Double!
+    var position: String!
+    var number: Int!
+    var position_short: String!
+    var last_team: String!
+    var image: URL!
+    var role: String!
+    var role_short: String!
+}
+
+class Team: Decodable{
+    var coaches: [Person]
+    var goalkeepers: [Person]
+    var centers: [Person]
+    var defenses: [Person]
+    var forwards: [Person]
+
+    let count = 5
+    
+    init() {
+        self.forwards = [Person]()
+        self.centers = [Person]()
+        self.defenses = [Person]()
+        self.goalkeepers = [Person]()
+        self.coaches = [Person]()
+    }
+    
+    func removeAll(){
+        self.coaches.removeAll()
+        self.goalkeepers.removeAll()
+        self.centers.removeAll()
+        self.defenses.removeAll()
+        self.forwards.removeAll()
+    }
+    
+    func get(section index: Int) -> [Person]{
+        
+        switch index {
+            case 0:
+                return self.coaches
+            
+            case 1:
+                return self.goalkeepers
+            
+            case 2:
+                return self.centers
+            
+            case 3:
+                return self.defenses
+            
+            case 4:
+                return self.forwards
+            
+            default:
+                return [Person]()
+        }
+        
+    }
+}
+
+struct statisticRequest: Decodable{
+    var success: Bool!
     var data: dataStatistics!
 }
 
 struct dataStatistics: Decodable{
     var statistics: [Statistic]
-}
-
-struct data: Decodable{
-    var games: [Game]
-}
-
-struct Game: Decodable {
-    var local: Bool!
-    var opponent: String!
-    var opponent_image: URL!
-    var datetime: String!
-    var league: String!
-    var image: String!
-    var home_score: Int!
-    var away_score: Int!
+    var code: Int!
 }
 
 struct Statistic: Decodable{
@@ -52,22 +110,26 @@ struct Statistic: Decodable{
     var score_diff: Int!
     var points: Int!
     var efec: String!
-
+    
 }
-/*
 
- {
-     "position": 1,
-     "image": "https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/11220/11220.png",
-     "team": "Club Atlético de San Luis",
-     "games": 14,
-     "win": 7,
-     "loss": 7,
-     "tie": 0,
-     "f_goals": 22,
-     "a_goals": 11,
-     "score_diff": 11,
-     "points": 28,
-     "efec": null
- }
- */
+struct gamesRequest: Decodable {
+    var success: Bool!
+    var data: data!
+}
+
+struct Game: Decodable {
+    var local: Bool!
+    var opponent: String!
+    var opponent_image: URL!
+    var datetime: String!
+    var league: String!
+    var image: String!
+    var home_score: Int!
+    var away_score: Int!
+}
+
+struct data: Decodable{
+    var games: [Game]
+    var code: Int!
+}

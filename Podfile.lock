@@ -1,0 +1,22 @@
+PODS:
+  - SDWebImage (5.0.2):
+    - SDWebImage/Core (= 5.0.2)
+  - SDWebImage/Core (5.0.2)
+  - SideMenu (5.0.3)
+
+DEPENDENCIES:
+  - SDWebImage
+  - SideMenu
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SDWebImage
+    - SideMenu
+
+SPEC CHECKSUMS:
+  SDWebImage: 6764b5fa0f73c203728052955dbefa2bf1f33282
+  SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
+
+PODFILE CHECKSUM: 622c663b1d6c23ebd3086aa187d09cf21b3d0655
+
+COCOAPODS: 1.6.1

@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import UIKit
+
+extension UIViewController {
+    func present(view vc: UIViewController, animated: Bool!){
+        self.present(vc, animated: animated, completion: nil)
+    }
+}

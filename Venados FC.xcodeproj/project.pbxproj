@@ -1,0 +1,881 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4907F85D227B687200818865 /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4907F85C227B687200818865 /* GameCollectionViewCell.swift */; };
+		4907F862227B7AE500818865 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4907F861227B7AE500818865 /* Game.swift */; };
+		4907F866227B864700818865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4907F865227B864700818865 /* Main.storyboard */; };
+		4912C35C227BCE84002F48C2 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912C35B227BCE84002F48C2 /* HeaderCollectionReusableView.swift */; };
+		4912C35E227BD4FE002F48C2 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912C35D227BD4FE002F48C2 /* Structs.swift */; };
+		4912C360227BD63F002F48C2 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912C35F227BD63F002F48C2 /* Statistics.swift */; };
+		4912C363227BE942002F48C2 /* PositionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912C362227BE942002F48C2 /* PositionTableViewCell.swift */; };
+		493F2D1A227B4DFD001B2FA8 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493F2D19227B4DFD001B2FA8 /* ContainerViewController.swift */; };
+		49481D6E227A7CC600AD11F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49481D6D227A7CC600AD11F4 /* AppDelegate.swift */; };
+		49481D76227A7CC600AD11F4 /* Venados_FC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49481D74227A7CC600AD11F4 /* Venados_FC.xcdatamodeld */; };
+		49481D78227A7CC800AD11F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49481D77227A7CC800AD11F4 /* Assets.xcassets */; };
+		49481D7B227A7CC800AD11F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49481D79227A7CC800AD11F4 /* LaunchScreen.storyboard */; };
+		49481D86227A7CC800AD11F4 /* Venados_FCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49481D85227A7CC800AD11F4 /* Venados_FCTests.swift */; };
+		49481D91227A7CC800AD11F4 /* Venados_FCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49481D90227A7CC800AD11F4 /* Venados_FCUITests.swift */; };
+		49481DAC227A971800AD11F4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49481DAB227A971800AD11F4 /* HomeViewController.swift */; };
+		49481DAE227A976500AD11F4 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49481DAD227A976500AD11F4 /* GamesViewController.swift */; };
+		49481DB4227AAF3800AD11F4 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49481DB3227AAF3800AD11F4 /* NavigationController.swift */; };
+		49481DB6227AB5D600AD11F4 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49481DB5227AB5D600AD11F4 /* MenuViewController.swift */; };
+		49481DB8227AB9D900AD11F4 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49481DB7227AB9D900AD11F4 /* MenuButton.swift */; };
+		4977C7C9227BCBE4007727A2 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977C7C8227BCBE4007727A2 /* Dictionary.swift */; };
+		497DB393227D05DE004A1828 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497DB392227D05DE004A1828 /* InfoViewController.swift */; };
+		497DB395227D31D9004A1828 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497DB394227D31D9004A1828 /* CollectionView.swift */; };
+		497DB397227D3761004A1828 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497DB396227D3761004A1828 /* String.swift */; };
+		497DB399227D376D004A1828 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497DB398227D376D004A1828 /* TableView.swift */; };
+		497DB39B227D378C004A1828 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497DB39A227D378C004A1828 /* ViewController.swift */; };
+		4986B5F2227BFA0D00F6E769 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4986B5F1227BFA0D00F6E769 /* PlayersViewController.swift */; };
+		4986B5F6227CA4A900F6E769 /* PlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4986B5F5227CA4A900F6E769 /* PlayerCollectionViewCell.swift */; };
+		4986B5F9227CA5C300F6E769 /* PlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4986B5F8227CA5C300F6E769 /* PlayerCell.xib */; };
+		4986B5FD227CA66900F6E769 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4986B5FC227CA66900F6E769 /* Image.swift */; };
+		4986B5FF227CA75100F6E769 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4986B5FE227CA75100F6E769 /* CircleImageView.swift */; };
+		49BD57AE227BA54E006C343A /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD57AD227BA54E006C343A /* Date.swift */; };
+		49CE7213227CCDFD00B247C4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE7212227CCDFD00B247C4 /* UIColor.swift */; };
+		49CE7215227CD8DD00B247C4 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE7214227CD8DD00B247C4 /* UIView.swift */; };
+		49CE7217227CEAAE00B247C4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE7216227CEAAE00B247C4 /* Player.swift */; };
+		947BEA9C8C5C4071065BE4BA /* Pods_Venados_FC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2115FA16EBFF24D846AA63F4 /* Pods_Venados_FC.framework */; };
+		F36C86036050F5CF17596AF0 /* Pods_Venados_FCUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B2793A2F5E08FE95ED6E60 /* Pods_Venados_FCUITests.framework */; };
+		FA669BF1BBA4C616EF79376B /* Pods_Venados_FCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E55BA5149FB79B04D9CCC58 /* Pods_Venados_FCTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		49481D82227A7CC800AD11F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49481D62227A7CC600AD11F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49481D69227A7CC600AD11F4;
+			remoteInfo = "Venados FC";
+		};
+		49481D8D227A7CC800AD11F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49481D62227A7CC600AD11F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49481D69227A7CC600AD11F4;
+			remoteInfo = "Venados FC";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E55BA5149FB79B04D9CCC58 /* Pods_Venados_FCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Venados_FCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2115FA16EBFF24D846AA63F4 /* Pods_Venados_FC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Venados_FC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4907F85C227B687200818865 /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
+		4907F861227B7AE500818865 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		4907F865227B864700818865 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4912C35B227BCE84002F48C2 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		4912C35D227BD4FE002F48C2 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		4912C35F227BD63F002F48C2 /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
+		4912C362227BE942002F48C2 /* PositionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionTableViewCell.swift; sourceTree = "<group>"; };
+		493F2D19227B4DFD001B2FA8 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		49481D6A227A7CC600AD11F4 /* Venados FC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Venados FC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49481D6D227A7CC600AD11F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		49481D75227A7CC600AD11F4 /* Venados_FC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Venados_FC.xcdatamodel; sourceTree = "<group>"; };
+		49481D77227A7CC800AD11F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49481D7A227A7CC800AD11F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		49481D7C227A7CC800AD11F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49481D81227A7CC800AD11F4 /* Venados FCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Venados FCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49481D85227A7CC800AD11F4 /* Venados_FCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venados_FCTests.swift; sourceTree = "<group>"; };
+		49481D87227A7CC800AD11F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49481D8C227A7CC800AD11F4 /* Venados FCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Venados FCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49481D90227A7CC800AD11F4 /* Venados_FCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venados_FCUITests.swift; sourceTree = "<group>"; };
+		49481D92227A7CC800AD11F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49481DAB227A971800AD11F4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		49481DAD227A976500AD11F4 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
+		49481DB3227AAF3800AD11F4 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		49481DB5227AB5D600AD11F4 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		49481DB7227AB9D900AD11F4 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		4977C7C8227BCBE4007727A2 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		497DB392227D05DE004A1828 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		497DB394227D31D9004A1828 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		497DB396227D3761004A1828 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		497DB398227D376D004A1828 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		497DB39A227D378C004A1828 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4986B5F1227BFA0D00F6E769 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		4986B5F5227CA4A900F6E769 /* PlayerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCollectionViewCell.swift; sourceTree = "<group>"; };
+		4986B5F8227CA5C300F6E769 /* PlayerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerCell.xib; sourceTree = "<group>"; };
+		4986B5FC227CA66900F6E769 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		4986B5FE227CA75100F6E769 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		49BD57AD227BA54E006C343A /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		49CE7212227CCDFD00B247C4 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		49CE7214227CD8DD00B247C4 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		49CE7216227CEAAE00B247C4 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		8A79AFABBD2E62B05781BC42 /* Pods-Venados FC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Venados FC.release.xcconfig"; path = "Target Support Files/Pods-Venados FC/Pods-Venados FC.release.xcconfig"; sourceTree = "<group>"; };
+		93312B20C2E720660FC34887 /* Pods-Venados FCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Venados FCTests.release.xcconfig"; path = "Target Support Files/Pods-Venados FCTests/Pods-Venados FCTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB8C28EFC71AA62CC8C85DAA /* Pods-Venados FCUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Venados FCUITests.debug.xcconfig"; path = "Target Support Files/Pods-Venados FCUITests/Pods-Venados FCUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF6248DD8575BDD893C465ED /* Pods-Venados FCUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Venados FCUITests.release.xcconfig"; path = "Target Support Files/Pods-Venados FCUITests/Pods-Venados FCUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C6B2793A2F5E08FE95ED6E60 /* Pods_Venados_FCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Venados_FCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D318280F222491105743B18C /* Pods-Venados FC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Venados FC.debug.xcconfig"; path = "Target Support Files/Pods-Venados FC/Pods-Venados FC.debug.xcconfig"; sourceTree = "<group>"; };
+		D85FC6E856B8AB9969E7192E /* Pods-Venados FCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Venados FCTests.debug.xcconfig"; path = "Target Support Files/Pods-Venados FCTests/Pods-Venados FCTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49481D67227A7CC600AD11F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				947BEA9C8C5C4071065BE4BA /* Pods_Venados_FC.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49481D7E227A7CC800AD11F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA669BF1BBA4C616EF79376B /* Pods_Venados_FCTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49481D89227A7CC800AD11F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F36C86036050F5CF17596AF0 /* Pods_Venados_FCUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		336444E3BE1B061FEABFB8BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2115FA16EBFF24D846AA63F4 /* Pods_Venados_FC.framework */,
+				0E55BA5149FB79B04D9CCC58 /* Pods_Venados_FCTests.framework */,
+				C6B2793A2F5E08FE95ED6E60 /* Pods_Venados_FCUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4912C361227BE3F6002F48C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4907F861227B7AE500818865 /* Game.swift */,
+				4912C35F227BD63F002F48C2 /* Statistics.swift */,
+				49CE7216227CEAAE00B247C4 /* Player.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		49481D61227A7CC600AD11F4 = {
+			isa = PBXGroup;
+			children = (
+				49481D6C227A7CC600AD11F4 /* Venados FC */,
+				49481D84227A7CC800AD11F4 /* Venados FCTests */,
+				49481D8F227A7CC800AD11F4 /* Venados FCUITests */,
+				49481D6B227A7CC600AD11F4 /* Products */,
+				5E35643D3DFAC351DC70D103 /* Pods */,
+				336444E3BE1B061FEABFB8BF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		49481D6B227A7CC600AD11F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49481D6A227A7CC600AD11F4 /* Venados FC.app */,
+				49481D81227A7CC800AD11F4 /* Venados FCTests.xctest */,
+				49481D8C227A7CC800AD11F4 /* Venados FCUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49481D6C227A7CC600AD11F4 /* Venados FC */ = {
+			isa = PBXGroup;
+			children = (
+				49481D6D227A7CC600AD11F4 /* AppDelegate.swift */,
+				4912C35D227BD4FE002F48C2 /* Structs.swift */,
+				4986B5F7227CA4B000F6E769 /* Cells */,
+				4912C361227BE3F6002F48C2 /* Model */,
+				49481DA6227A94A700AD11F4 /* Controller */,
+				49481DA4227A949100AD11F4 /* Helpers */,
+				49481D77227A7CC800AD11F4 /* Assets.xcassets */,
+				4907F865227B864700818865 /* Main.storyboard */,
+				49481D79227A7CC800AD11F4 /* LaunchScreen.storyboard */,
+				49481D7C227A7CC800AD11F4 /* Info.plist */,
+				49481D74227A7CC600AD11F4 /* Venados_FC.xcdatamodeld */,
+			);
+			path = "Venados FC";
+			sourceTree = "<group>";
+		};
+		49481D84227A7CC800AD11F4 /* Venados FCTests */ = {
+			isa = PBXGroup;
+			children = (
+				49481D85227A7CC800AD11F4 /* Venados_FCTests.swift */,
+				49481D87227A7CC800AD11F4 /* Info.plist */,
+			);
+			path = "Venados FCTests";
+			sourceTree = "<group>";
+		};
+		49481D8F227A7CC800AD11F4 /* Venados FCUITests */ = {
+			isa = PBXGroup;
+			children = (
+				49481D90227A7CC800AD11F4 /* Venados_FCUITests.swift */,
+				49481D92227A7CC800AD11F4 /* Info.plist */,
+			);
+			path = "Venados FCUITests";
+			sourceTree = "<group>";
+		};
+		49481DA4227A949100AD11F4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				49481DB7227AB9D900AD11F4 /* MenuButton.swift */,
+				49BD57AD227BA54E006C343A /* Date.swift */,
+				4977C7C8227BCBE4007727A2 /* Dictionary.swift */,
+				4986B5FC227CA66900F6E769 /* Image.swift */,
+				4986B5FE227CA75100F6E769 /* CircleImageView.swift */,
+				49CE7212227CCDFD00B247C4 /* UIColor.swift */,
+				49CE7214227CD8DD00B247C4 /* UIView.swift */,
+				497DB394227D31D9004A1828 /* CollectionView.swift */,
+				497DB396227D3761004A1828 /* String.swift */,
+				497DB398227D376D004A1828 /* TableView.swift */,
+				497DB39A227D378C004A1828 /* ViewController.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		49481DA6227A94A700AD11F4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				49481DB3227AAF3800AD11F4 /* NavigationController.swift */,
+				49481DB5227AB5D600AD11F4 /* MenuViewController.swift */,
+				493F2D19227B4DFD001B2FA8 /* ContainerViewController.swift */,
+				49481DAB227A971800AD11F4 /* HomeViewController.swift */,
+				4986B5F1227BFA0D00F6E769 /* PlayersViewController.swift */,
+				49481DAD227A976500AD11F4 /* GamesViewController.swift */,
+				497DB392227D05DE004A1828 /* InfoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4986B5F7227CA4B000F6E769 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4907F85C227B687200818865 /* GameCollectionViewCell.swift */,
+				4912C35B227BCE84002F48C2 /* HeaderCollectionReusableView.swift */,
+				4912C362227BE942002F48C2 /* PositionTableViewCell.swift */,
+				4986B5F5227CA4A900F6E769 /* PlayerCollectionViewCell.swift */,
+				4986B5F8227CA5C300F6E769 /* PlayerCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5E35643D3DFAC351DC70D103 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D318280F222491105743B18C /* Pods-Venados FC.debug.xcconfig */,
+				8A79AFABBD2E62B05781BC42 /* Pods-Venados FC.release.xcconfig */,
+				D85FC6E856B8AB9969E7192E /* Pods-Venados FCTests.debug.xcconfig */,
+				93312B20C2E720660FC34887 /* Pods-Venados FCTests.release.xcconfig */,
+				AB8C28EFC71AA62CC8C85DAA /* Pods-Venados FCUITests.debug.xcconfig */,
+				BF6248DD8575BDD893C465ED /* Pods-Venados FCUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49481D69227A7CC600AD11F4 /* Venados FC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49481D95227A7CC800AD11F4 /* Build configuration list for PBXNativeTarget "Venados FC" */;
+			buildPhases = (
+				0C29069DD5483984CB2A8C27 /* [CP] Check Pods Manifest.lock */,
+				49481D66227A7CC600AD11F4 /* Sources */,
+				49481D67227A7CC600AD11F4 /* Frameworks */,
+				49481D68227A7CC600AD11F4 /* Resources */,
+				94F50ACBE91C45A08069EF65 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Venados FC";
+			productName = "Venados FC";
+			productReference = 49481D6A227A7CC600AD11F4 /* Venados FC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		49481D80227A7CC800AD11F4 /* Venados FCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49481D98227A7CC800AD11F4 /* Build configuration list for PBXNativeTarget "Venados FCTests" */;
+			buildPhases = (
+				4129C594627DBF8AAA6F3C71 /* [CP] Check Pods Manifest.lock */,
+				49481D7D227A7CC800AD11F4 /* Sources */,
+				49481D7E227A7CC800AD11F4 /* Frameworks */,
+				49481D7F227A7CC800AD11F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49481D83227A7CC800AD11F4 /* PBXTargetDependency */,
+			);
+			name = "Venados FCTests";
+			productName = "Venados FCTests";
+			productReference = 49481D81227A7CC800AD11F4 /* Venados FCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		49481D8B227A7CC800AD11F4 /* Venados FCUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49481D9B227A7CC800AD11F4 /* Build configuration list for PBXNativeTarget "Venados FCUITests" */;
+			buildPhases = (
+				6A573B6FD54428971B36A7D6 /* [CP] Check Pods Manifest.lock */,
+				49481D88227A7CC800AD11F4 /* Sources */,
+				49481D89227A7CC800AD11F4 /* Frameworks */,
+				49481D8A227A7CC800AD11F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49481D8E227A7CC800AD11F4 /* PBXTargetDependency */,
+			);
+			name = "Venados FCUITests";
+			productName = "Venados FCUITests";
+			productReference = 49481D8C227A7CC800AD11F4 /* Venados FCUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49481D62227A7CC600AD11F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Juan Carlos Estevez";
+				TargetAttributes = {
+					49481D69227A7CC600AD11F4 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					49481D80227A7CC800AD11F4 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 49481D69227A7CC600AD11F4;
+					};
+					49481D8B227A7CC800AD11F4 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 49481D69227A7CC600AD11F4;
+					};
+				};
+			};
+			buildConfigurationList = 49481D65227A7CC600AD11F4 /* Build configuration list for PBXProject "Venados FC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 49481D61227A7CC600AD11F4;
+			productRefGroup = 49481D6B227A7CC600AD11F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49481D69227A7CC600AD11F4 /* Venados FC */,
+				49481D80227A7CC800AD11F4 /* Venados FCTests */,
+				49481D8B227A7CC800AD11F4 /* Venados FCUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49481D68227A7CC600AD11F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4986B5F9227CA5C300F6E769 /* PlayerCell.xib in Resources */,
+				4907F866227B864700818865 /* Main.storyboard in Resources */,
+				49481D7B227A7CC800AD11F4 /* LaunchScreen.storyboard in Resources */,
+				49481D78227A7CC800AD11F4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49481D7F227A7CC800AD11F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49481D8A227A7CC800AD11F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C29069DD5483984CB2A8C27 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Venados FC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4129C594627DBF8AAA6F3C71 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Venados FCTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A573B6FD54428971B36A7D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Venados FCUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94F50ACBE91C45A08069EF65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Venados FC/Pods-Venados FC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Venados FC/Pods-Venados FC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49481D66227A7CC600AD11F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4912C35E227BD4FE002F48C2 /* Structs.swift in Sources */,
+				49CE7213227CCDFD00B247C4 /* UIColor.swift in Sources */,
+				49CE7215227CD8DD00B247C4 /* UIView.swift in Sources */,
+				49481DAC227A971800AD11F4 /* HomeViewController.swift in Sources */,
+				497DB399227D376D004A1828 /* TableView.swift in Sources */,
+				49CE7217227CEAAE00B247C4 /* Player.swift in Sources */,
+				4907F85D227B687200818865 /* GameCollectionViewCell.swift in Sources */,
+				49481DB4227AAF3800AD11F4 /* NavigationController.swift in Sources */,
+				49481D6E227A7CC600AD11F4 /* AppDelegate.swift in Sources */,
+				4986B5F2227BFA0D00F6E769 /* PlayersViewController.swift in Sources */,
+				49481DB6227AB5D600AD11F4 /* MenuViewController.swift in Sources */,
+				49481DB8227AB9D900AD11F4 /* MenuButton.swift in Sources */,
+				4986B5FF227CA75100F6E769 /* CircleImageView.swift in Sources */,
+				4907F862227B7AE500818865 /* Game.swift in Sources */,
+				49481D76227A7CC600AD11F4 /* Venados_FC.xcdatamodeld in Sources */,
+				497DB397227D3761004A1828 /* String.swift in Sources */,
+				49481DAE227A976500AD11F4 /* GamesViewController.swift in Sources */,
+				493F2D1A227B4DFD001B2FA8 /* ContainerViewController.swift in Sources */,
+				497DB39B227D378C004A1828 /* ViewController.swift in Sources */,
+				497DB395227D31D9004A1828 /* CollectionView.swift in Sources */,
+				4977C7C9227BCBE4007727A2 /* Dictionary.swift in Sources */,
+				4986B5FD227CA66900F6E769 /* Image.swift in Sources */,
+				4912C360227BD63F002F48C2 /* Statistics.swift in Sources */,
+				4912C363227BE942002F48C2 /* PositionTableViewCell.swift in Sources */,
+				49BD57AE227BA54E006C343A /* Date.swift in Sources */,
+				4912C35C227BCE84002F48C2 /* HeaderCollectionReusableView.swift in Sources */,
+				497DB393227D05DE004A1828 /* InfoViewController.swift in Sources */,
+				4986B5F6227CA4A900F6E769 /* PlayerCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49481D7D227A7CC800AD11F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49481D86227A7CC800AD11F4 /* Venados_FCTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49481D88227A7CC800AD11F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49481D91227A7CC800AD11F4 /* Venados_FCUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49481D83227A7CC800AD11F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49481D69227A7CC600AD11F4 /* Venados FC */;
+			targetProxy = 49481D82227A7CC800AD11F4 /* PBXContainerItemProxy */;
+		};
+		49481D8E227A7CC800AD11F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49481D69227A7CC600AD11F4 /* Venados FC */;
+			targetProxy = 49481D8D227A7CC800AD11F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		49481D79227A7CC800AD11F4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49481D7A227A7CC800AD11F4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49481D93227A7CC800AD11F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		49481D94227A7CC800AD11F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49481D96227A7CC800AD11F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D318280F222491105743B18C /* Pods-Venados FC.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S8662L649U;
+				INFOPLIST_FILE = "Venados FC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JCTechnologies.Venados-FC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		49481D97227A7CC800AD11F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A79AFABBD2E62B05781BC42 /* Pods-Venados FC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S8662L649U;
+				INFOPLIST_FILE = "Venados FC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JCTechnologies.Venados-FC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		49481D99227A7CC800AD11F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D85FC6E856B8AB9969E7192E /* Pods-Venados FCTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S8662L649U;
+				INFOPLIST_FILE = "Venados FCTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JCTechnologies.Venados-FCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Venados FC.app/Venados FC";
+			};
+			name = Debug;
+		};
+		49481D9A227A7CC800AD11F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93312B20C2E720660FC34887 /* Pods-Venados FCTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S8662L649U;
+				INFOPLIST_FILE = "Venados FCTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JCTechnologies.Venados-FCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Venados FC.app/Venados FC";
+			};
+			name = Release;
+		};
+		49481D9C227A7CC800AD11F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB8C28EFC71AA62CC8C85DAA /* Pods-Venados FCUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S8662L649U;
+				INFOPLIST_FILE = "Venados FCUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JCTechnologies.Venados-FCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Venados FC";
+			};
+			name = Debug;
+		};
+		49481D9D227A7CC800AD11F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF6248DD8575BDD893C465ED /* Pods-Venados FCUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S8662L649U;
+				INFOPLIST_FILE = "Venados FCUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JCTechnologies.Venados-FCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Venados FC";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49481D65227A7CC600AD11F4 /* Build configuration list for PBXProject "Venados FC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49481D93227A7CC800AD11F4 /* Debug */,
+				49481D94227A7CC800AD11F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49481D95227A7CC800AD11F4 /* Build configuration list for PBXNativeTarget "Venados FC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49481D96227A7CC800AD11F4 /* Debug */,
+				49481D97227A7CC800AD11F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49481D98227A7CC800AD11F4 /* Build configuration list for PBXNativeTarget "Venados FCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49481D99227A7CC800AD11F4 /* Debug */,
+				49481D9A227A7CC800AD11F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49481D9B227A7CC800AD11F4 /* Build configuration list for PBXNativeTarget "Venados FCUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49481D9C227A7CC800AD11F4 /* Debug */,
+				49481D9D227A7CC800AD11F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		49481D74227A7CC600AD11F4 /* Venados_FC.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				49481D75227A7CC600AD11F4 /* Venados_FC.xcdatamodel */,
+			);
+			currentVersion = 49481D75227A7CC600AD11F4 /* Venados_FC.xcdatamodel */;
+			path = Venados_FC.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 49481D62227A7CC600AD11F4 /* Project object */;
+}
