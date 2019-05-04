@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aCT-Hg-CIV">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Statistics View Controller-->
+        <scene sceneID="YPK-up-s6d">
+            <objects>
+                <viewController storyboardIdentifier="statistics" useStoryboardIdentifierAsRestorationIdentifier="YES" id="te1-Fz-AQR" customClass="StatisticsViewController" customModule="Venados_FC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xXC-8a-1rS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iX-Xr-wAp">
+                                <rect key="frame" x="171.66666666666666" y="357.66666666666669" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0iX-Xr-wAp" firstAttribute="centerX" secondItem="xXC-8a-1rS" secondAttribute="centerX" id="LdL-d4-18a"/>
+                            <constraint firstItem="0iX-Xr-wAp" firstAttribute="centerY" secondItem="xXC-8a-1rS" secondAttribute="centerY" id="taZ-zY-lCF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qNa-hJ-kqZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bLb-oA-tbD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="usY-xq-nXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1357" y="1879"/>
+        </scene>
+        <!--Games View Controller-->
+        <scene sceneID="wVd-6l-jOZ">
+            <objects>
+                <viewController storyboardIdentifier="games" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kz5-R3-ods" customClass="GamesViewController" customModule="Venados_FC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="igj-54-Pcm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVA-xG-qsJ">
+                                <rect key="frame" x="180" y="357.66666666666669" width="54" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eVA-xG-qsJ" firstAttribute="centerX" secondItem="igj-54-Pcm" secondAttribute="centerX" id="LJe-wr-gAV"/>
+                            <constraint firstItem="eVA-xG-qsJ" firstAttribute="centerY" secondItem="igj-54-Pcm" secondAttribute="centerY" id="fv2-R8-xVX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Sz-cg-6Zg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nNk-LB-vwm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="twM-YC-D5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1357" y="1162"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CZl-Ax-rlt">
+            <objects>
+                <navigationController storyboardIdentifier="LeftMenuNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hVg-LH-gu6" customClass="NavigationController" customModule="Venados_FC" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A25-BI-ydj">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="menuWidth">
+                            <real key="value" value="200"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="UAw-AX-R6A" kind="relationship" relationship="rootViewController" id="KJr-fW-Thh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="364-aG-rRj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-558" y="-382"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="ej0-vJ-bFS">
+            <objects>
+                <viewController id="UAw-AX-R6A" customClass="MenuViewController" customModule="Venados_FC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pVk-cJ-Y2m">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="venados" translatesAutoresizingMaskIntoConstraints="NO" id="Qam-Vy-lEy">
+                                <rect key="frame" x="122" y="104" width="170" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="nRH-yt-fVA"/>
+                                    <constraint firstAttribute="height" constant="110" id="tF7-Ve-jQb"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Syx-NN-elf">
+                                <rect key="frame" x="10" y="254" width="394" height="140"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPE-4v-OXa" customClass="MenuButton" customModule="Venados_FC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="30"/>
+                                        <state key="normal" title="Menu"/>
+                                        <connections>
+                                            <action selector="didSelectMenu:" destination="UAw-AX-R6A" eventType="touchUpInside" id="KBn-HM-YsK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SD-e5-5w9" customClass="MenuButton" customModule="Venados_FC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55" width="394" height="30"/>
+                                        <state key="normal" title="Estadisticas"/>
+                                        <connections>
+                                            <action selector="didSelectStatistics:" destination="UAw-AX-R6A" eventType="touchUpInside" id="Uva-Yb-3NO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLy-od-TcW" customClass="MenuButton" customModule="Venados_FC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="110" width="394" height="30"/>
+                                        <state key="normal" title="Juegos"/>
+                                        <connections>
+                                            <action selector="didSelectGames:" destination="UAw-AX-R6A" eventType="touchUpInside" id="yEX-h6-vTJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qam-Vy-lEy" firstAttribute="top" secondItem="iyS-05-FjJ" secondAttribute="top" constant="40" id="60E-ei-ebU"/>
+                            <constraint firstItem="Syx-NN-elf" firstAttribute="top" secondItem="Qam-Vy-lEy" secondAttribute="bottom" constant="40" id="OM7-2H-p58"/>
+                            <constraint firstItem="Syx-NN-elf" firstAttribute="leading" secondItem="iyS-05-FjJ" secondAttribute="leading" constant="10" id="Tdh-rw-dXC"/>
+                            <constraint firstItem="Qam-Vy-lEy" firstAttribute="centerX" secondItem="pVk-cJ-Y2m" secondAttribute="centerX" id="U8O-IR-ud9"/>
+                            <constraint firstItem="iyS-05-FjJ" firstAttribute="trailing" secondItem="Syx-NN-elf" secondAttribute="trailing" constant="10" id="yXm-dh-6CY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iyS-05-FjJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hAf-uf-oL5"/>
+                    <connections>
+                        <outlet property="games" destination="rLy-od-TcW" id="Ccr-Xa-q15"/>
+                        <outlet property="home" destination="uPE-4v-OXa" id="mXV-yB-v75"/>
+                        <outlet property="image" destination="Qam-Vy-lEy" id="lBZ-3c-8DO"/>
+                        <outlet property="stackView" destination="Syx-NN-elf" id="VX5-D5-ZmW"/>
+                        <outlet property="statistics" destination="rLy-od-TcW" id="S6B-o4-sxo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbd-Ti-agh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="281.15942028985512" y="-386.41304347826087"/>
+        </scene>
+        <!--Container View Controller-->
+        <scene sceneID="oFJ-rh-sxN">
+            <objects>
+                <viewController id="cnK-ih-dPY" customClass="ContainerViewController" customModule="Venados_FC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gh4-MJ-STR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0S-Lu-pgh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <connections>
+                                    <segue destination="ooW-YE-oPM" kind="embed" id="BK4-YA-dPX"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EI3-cm-iX7">
+                                <rect key="frame" x="10" y="74" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="1et-c2-Yvd"/>
+                                    <constraint firstAttribute="height" constant="30" id="PJU-10-vE9"/>
+                                </constraints>
+                                <color key="tintColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button" image="hamburger"/>
+                                <connections>
+                                    <action selector="didSelectHomeButton:" destination="cnK-ih-dPY" eventType="touchUpInside" id="waZ-ew-C94"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7f-Ju-qgZ">
+                                <rect key="frame" x="0.0" y="64" width="20" height="672"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="vtV-Jh-Omr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="n0S-Lu-pgh" firstAttribute="leading" secondItem="1x0-uW-kiY" secondAttribute="leading" id="3UW-Lp-jca"/>
+                            <constraint firstItem="n0S-Lu-pgh" firstAttribute="bottom" secondItem="1x0-uW-kiY" secondAttribute="bottom" id="8Vk-lx-3L6"/>
+                            <constraint firstItem="u7f-Ju-qgZ" firstAttribute="bottom" secondItem="1x0-uW-kiY" secondAttribute="bottom" id="DrK-Jh-G05"/>
+                            <constraint firstItem="u7f-Ju-qgZ" firstAttribute="top" secondItem="1x0-uW-kiY" secondAttribute="top" id="H8A-Ig-Mso"/>
+                            <constraint firstItem="u7f-Ju-qgZ" firstAttribute="leading" secondItem="1x0-uW-kiY" secondAttribute="leading" id="NoI-3e-y9c"/>
+                            <constraint firstItem="n0S-Lu-pgh" firstAttribute="trailing" secondItem="1x0-uW-kiY" secondAttribute="trailing" id="WaK-Hr-nNt"/>
+                            <constraint firstItem="EI3-cm-iX7" firstAttribute="leading" secondItem="1x0-uW-kiY" secondAttribute="leading" constant="10" id="cJz-iw-4fZ"/>
+                            <constraint firstItem="EI3-cm-iX7" firstAttribute="top" secondItem="1x0-uW-kiY" secondAttribute="top" constant="10" id="sAl-PG-IY6"/>
+                            <constraint firstItem="n0S-Lu-pgh" firstAttribute="top" secondItem="Gh4-MJ-STR" secondAttribute="top" id="sTh-a8-vyt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1x0-uW-kiY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bTw-I4-u8q"/>
+                    <connections>
+                        <outlet property="container" destination="n0S-Lu-pgh" id="Gux-Bc-RMh"/>
+                        <outlet property="edge" destination="u7f-Ju-qgZ" id="EJY-PV-Mxa"/>
+                        <outlet property="homeButton" destination="EI3-cm-iX7" id="xUQ-er-xCL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aRZ-dP-6rp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="428.98550724637687" y="432.88043478260875"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="m0M-Ma-ElB">
+            <objects>
+                <viewController storyboardIdentifier="home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ooW-YE-oPM" customClass="HomeViewController" customModule="Venados_FC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8hN-XD-aAB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="venados" translatesAutoresizingMaskIntoConstraints="NO" id="WXX-Vs-u1k">
+                                <rect key="frame" x="142" y="60" width="130" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="tGO-U8-iER"/>
+                                    <constraint firstAttribute="height" constant="150" id="xNa-DA-CY6"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5eZ-on-0mK">
+                                <rect key="frame" x="0.0" y="250" width="414" height="486"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lS-t3-7Mb">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9D-Hz-vHu">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="70"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmu-4A-Rc7">
+                                                        <rect key="frame" x="72" y="20" width="63" height="30"/>
+                                                        <state key="normal" title="Copa MX">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="qmu-4A-Rc7" firstAttribute="centerY" secondItem="G9D-Hz-vHu" secondAttribute="centerY" id="K2W-dp-piH"/>
+                                                    <constraint firstItem="qmu-4A-Rc7" firstAttribute="centerX" secondItem="G9D-Hz-vHu" secondAttribute="centerX" id="Pvh-HQ-n9v"/>
+                                                    <constraint firstAttribute="height" constant="70" id="UNQ-hI-1G4"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pbh-Cn-MDU">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="70"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1Q-5K-M8e">
+                                                        <rect key="frame" x="60.666666666666686" y="20" width="86" height="30"/>
+                                                        <state key="normal" title="Ascenso MX">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="M1Q-5K-M8e" firstAttribute="centerX" secondItem="Pbh-Cn-MDU" secondAttribute="centerX" id="5Ea-bG-iwA"/>
+                                                    <constraint firstItem="M1Q-5K-M8e" firstAttribute="centerY" secondItem="Pbh-Cn-MDU" secondAttribute="centerY" id="edn-Pq-swt"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="G9D-Hz-vHu" firstAttribute="width" secondItem="Pbh-Cn-MDU" secondAttribute="width" id="YNe-XR-SkM"/>
+                                            <constraint firstItem="Pbh-Cn-MDU" firstAttribute="height" secondItem="G9D-Hz-vHu" secondAttribute="height" id="k8i-Ld-xUz"/>
+                                        </constraints>
+                                    </stackView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C27-Ay-d4f">
+                                        <rect key="frame" x="0.0" y="70" width="414" height="416"/>
+                                        <color key="backgroundColor" red="0.45490196078431372" green="0.67843137254901964" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Kik-eJ-JhK">
+                                            <size key="itemSize" width="412" height="94"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="gameCell" id="kbK-KI-Rlh" customClass="GameCollectionViewCell" customModule="Venados_FC" customModuleProvider="target">
+                                                <rect key="frame" x="1" y="0.0" width="412" height="94"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="412" height="94"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TyH-RK-BSN" customClass="NoiseView" customModule="Venados_FC" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="412" height="90"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="90" id="n8S-hU-DRI"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </view>
+                                                <color key="backgroundColor" red="0.45490196078431372" green="0.67843137254901964" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="TyH-RK-BSN" firstAttribute="top" secondItem="kbK-KI-Rlh" secondAttribute="top" id="5fm-Si-DEP"/>
+                                                    <constraint firstAttribute="trailing" secondItem="TyH-RK-BSN" secondAttribute="trailing" id="CUi-5Y-vC9"/>
+                                                    <constraint firstItem="TyH-RK-BSN" firstAttribute="leading" secondItem="kbK-KI-Rlh" secondAttribute="leading" id="k9B-sO-wzh"/>
+                                                    <constraint firstAttribute="bottom" secondItem="TyH-RK-BSN" secondAttribute="bottom" id="qjQ-CC-Ynt"/>
+                                                </constraints>
+                                                <size key="customSize" width="412" height="94"/>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WXX-Vs-u1k" firstAttribute="centerX" secondItem="8hN-XD-aAB" secondAttribute="centerX" id="8gd-CH-7dV"/>
+                            <constraint firstItem="5eZ-on-0mK" firstAttribute="leading" secondItem="s4j-ur-Kaf" secondAttribute="leading" id="B96-i4-z4t"/>
+                            <constraint firstItem="5eZ-on-0mK" firstAttribute="top" secondItem="WXX-Vs-u1k" secondAttribute="bottom" constant="40" id="EeI-zA-CcR"/>
+                            <constraint firstItem="s4j-ur-Kaf" firstAttribute="bottom" secondItem="5eZ-on-0mK" secondAttribute="bottom" id="UnA-fP-LI2"/>
+                            <constraint firstItem="WXX-Vs-u1k" firstAttribute="top" secondItem="s4j-ur-Kaf" secondAttribute="top" constant="40" id="XP8-yQ-B1r"/>
+                            <constraint firstItem="s4j-ur-Kaf" firstAttribute="trailing" secondItem="5eZ-on-0mK" secondAttribute="trailing" id="e0s-Hb-nT8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s4j-ur-Kaf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="c6w-GT-XNb"/>
+                    <connections>
+                        <outlet property="ascensoMXB" destination="M1Q-5K-M8e" id="mVe-uf-G9w"/>
+                        <outlet property="ascensoMXView" destination="Pbh-Cn-MDU" id="nEt-1v-MvS"/>
+                        <outlet property="collectionView" destination="C27-Ay-d4f" id="rRZ-5E-yav"/>
+                        <outlet property="copaMXB" destination="qmu-4A-Rc7" id="UcO-4e-FoI"/>
+                        <outlet property="copaMXView" destination="G9D-Hz-vHu" id="xfV-nx-sE6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xyb-ws-SWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1356.521739130435" y="432.88043478260875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NJh-qY-zsp">
+            <objects>
+                <navigationController useStoryboardIdentifierAsRestorationIdentifier="YES" id="aCT-Hg-CIV" sceneMemberID="viewController">
+                    <size key="freeformSize" width="414" height="736"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w41-rE-vKz">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="menuWidth">
+                            <real key="value" value="300"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="cnK-ih-dPY" kind="relationship" relationship="rootViewController" id="CSc-Zj-nwx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Usa-sw-eMp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-510" y="433"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hamburger" width="220" height="220"/>
+        <image name="venados" width="621" height="780"/>
+    </resources>
+</document>
