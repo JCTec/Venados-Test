@@ -30,6 +30,7 @@ extension UIColor {
         self.init(red:red, green:green, blue:blue, alpha:1)
     }
     
+    /// Colores Oficiales de Venados F.C.
     struct Venados {
         struct Green {
             static let dark = UIColor(hex: 0x00762b)

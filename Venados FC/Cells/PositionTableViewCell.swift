@@ -33,10 +33,16 @@ class PositionTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    /// Asigna un url de imagen a la imagen del equipo.
+    ///
+    /// - Parameter URL: URL a Agregar.
     func setImage(url: URL){
         self.setURL(url, for: self.teamImage)
     }
     
+    /// Asigna un url de imagen a una UIImage View.
+    ///
+    /// - Parameter URL: URL a Agregar, Viw a la cual agregar la imagen.
     private func setURL(_ url: URL, for view: UIImageView){
         
         view.startAnimating()

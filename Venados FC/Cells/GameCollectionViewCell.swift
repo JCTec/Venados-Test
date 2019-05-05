@@ -26,6 +26,9 @@ class GameCollectionViewCell: UICollectionViewCell {
 
     }
     
+    /// Asigna el juego a sus etiquetas correspondientes.
+    ///
+    /// - Parameter game: El Juego a agregar.
     func setValues(for game: Game){
         let date = Date.getFromProfessional(str: game.datetime)
         
@@ -51,15 +54,24 @@ class GameCollectionViewCell: UICollectionViewCell {
         self.score.text = "\(game.home_score ?? 0) - \(game.away_score ?? 0)"
     }
     
+    /// Asigna la Imagen de la Derecha.
+    ///
+    /// - Parameter URL: URL a Agregar.
     func setImageForRight(with URL: URL){
         self.setURL(URL, for: self.rightTeamImage)
 
     }
     
+    /// Asigna la Imagen de la Izquierda.
+    ///
+    /// - Parameter URL: URL a Agregar.
     func setImageForLeft(with URL: URL){
         self.setURL(URL, for: self.leftTeamImage)
     }
     
+    /// Asigna un url de imagen a una UIImage View.
+    ///
+    /// - Parameter URL: URL a Agregar, Viw a la cual agregar la imagen.
     func setURL(_ url: URL, for view: UIImageView){
         
         view.startAnimating()
@@ -77,19 +89,4 @@ class GameCollectionViewCell: UICollectionViewCell {
         }
         
     }
-    
-    /*
-     
-     struct Game: Decodable {
-         var local: Bool!
-         var opponent: String!
-         var opponent_image: String!
-         var datetime: String!
-         var league: String!
-         var image: String!
-         var home_score: Int!
-         var away_score: Int!
-     }
- 
- */
 }

@@ -17,6 +17,7 @@ class Player {
     
     private var team: Team! = Team()
     
+    /// Elimina todos los datos en Team.
     func removeAll(){
         self.team.centers.removeAll()
         self.team.coaches.removeAll()
@@ -25,10 +26,18 @@ class Player {
         self.team.goalkeepers.removeAll()
     }
     
+    /// Regresa el objeto Team.
+    ///
+    /// - Returns: Team.
     func getTeam() -> Team{
         return self.team
     }
     
+    /// Actualiza el Singleton.
+    ///
+    /// - Parameters:
+    ///   - order: Los datos se guardan en orden.
+    ///   - completed: Completition Block.
     func refresh(completed: @escaping (Result<Team, Error>) -> ()){
         
         let urlStr = "\(Base_URL)/api/players"

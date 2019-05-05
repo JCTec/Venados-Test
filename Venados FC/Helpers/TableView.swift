@@ -10,6 +10,12 @@ import Foundation
 import UIKit
 
 extension UITableView {
+    
+    /// Agrega un mensaje a un TableView vacío.
+    ///
+    /// - Parameters:
+    ///   - title: Titulo a Agregar
+    ///   - message: Mensaje a Agregar
     func setEmptyView(title: String, message: String) {
         let emptyView = UIView(frame: CGRect(x: self.center.x, y: self.center.y, width: self.bounds.size.width, height: self.bounds.size.height))
         let titleLabel = UILabel()
@@ -35,6 +41,8 @@ extension UITableView {
         self.backgroundView = emptyView
         self.separatorStyle = .none
     }
+    
+    /// Regresa una TableView a su estado original despues de usar setEmptyView(title: String, message: String)
     func restore() {
         self.backgroundView = nil
         self.separatorStyle = .singleLine

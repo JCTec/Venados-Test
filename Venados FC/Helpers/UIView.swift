@@ -10,14 +10,15 @@ import Foundation
 import UIKit
 
 extension UIView {
-    class func loadFromNibNamed(nibNamed: String, bundle: Bundle? = nil) -> UIView? {
-        return UINib(
-            nibName: nibNamed,
-            bundle: bundle
-            ).instantiate(withOwner: nil, options: nil)[0] as? UIView
-    }
-    
     @discardableResult
+    /// Agrega Bordes a una UIView
+    ///
+    /// - Parameters:
+    ///   - edges: Que lados se le debe agregar borde.
+    ///   - color: Color del borde.
+    ///   - inset: Inset a agregar.
+    ///   - thickness: Grosor del Borde
+    /// - Returns: [UIView] Arreglo de UIViews
     func addBorders(edges: UIRectEdge,
                     color: UIColor,
                     inset: CGFloat = 0.0,

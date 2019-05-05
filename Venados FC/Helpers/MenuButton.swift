@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// Boton usado en el Menu.
 class MenuButton: UIButton {
     
     override func awakeFromNib() {

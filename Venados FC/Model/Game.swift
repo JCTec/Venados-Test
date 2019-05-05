@@ -18,14 +18,26 @@ class GameManager {
     private var games = [Game]()
     private var gamesInOrder = Dictionary<String, [Game]>()
 
+    /// Regresa los juegos el singleton.
+    ///
+    /// - Returns: Array de Juegos
     func getGames() -> [Game]{
         return self.games
     }
     
+    /// Regresa los juegos el singleton en orden.
+    ///
+    /// - Returns: Array de Juegos
     func getGamesInOrder() -> Dictionary<String, [Game]>{
         return self.gamesInOrder
     }
     
+    
+    /// Actualiza el Singleton.
+    ///
+    /// - Parameters:
+    ///   - order: Los datos se guardan en orden.
+    ///   - completed: Completition Block.
     func refresh(order: Bool, completed: @escaping (Result<[Game], Error>) -> ()){
         
         let urlStr = "\(Base_URL)/api/games"

@@ -23,7 +23,6 @@
 		49481D91227A7CC800AD11F4 /* Venados_FCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49481D90227A7CC800AD11F4 /* Venados_FCUITests.swift */; };
 		49481DAC227A971800AD11F4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49481DAB227A971800AD11F4 /* HomeViewController.swift */; };
 		49481DAE227A976500AD11F4 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49481DAD227A976500AD11F4 /* GamesViewController.swift */; };
-		49481DB4227AAF3800AD11F4 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49481DB3227AAF3800AD11F4 /* NavigationController.swift */; };
 		49481DB6227AB5D600AD11F4 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49481DB5227AB5D600AD11F4 /* MenuViewController.swift */; };
 		49481DB8227AB9D900AD11F4 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49481DB7227AB9D900AD11F4 /* MenuButton.swift */; };
 		4977C7C9227BCBE4007727A2 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977C7C8227BCBE4007727A2 /* Dictionary.swift */; };
@@ -88,7 +87,6 @@
 		49481D92227A7CC800AD11F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49481DAB227A971800AD11F4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		49481DAD227A976500AD11F4 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
-		49481DB3227AAF3800AD11F4 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		49481DB5227AB5D600AD11F4 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		49481DB7227AB9D900AD11F4 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		4977C7C8227BCBE4007727A2 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
@@ -242,7 +240,6 @@
 		49481DA6227A94A700AD11F4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				49481DB3227AAF3800AD11F4 /* NavigationController.swift */,
 				49481DB5227AB5D600AD11F4 /* MenuViewController.swift */,
 				493F2D19227B4DFD001B2FA8 /* ContainerViewController.swift */,
 				49481DAB227A971800AD11F4 /* HomeViewController.swift */,
@@ -514,7 +511,6 @@
 				497DB399227D376D004A1828 /* TableView.swift in Sources */,
 				49CE7217227CEAAE00B247C4 /* Player.swift in Sources */,
 				4907F85D227B687200818865 /* GameCollectionViewCell.swift in Sources */,
-				49481DB4227AAF3800AD11F4 /* NavigationController.swift in Sources */,
 				49481D6E227A7CC600AD11F4 /* AppDelegate.swift in Sources */,
 				4986B5F2227BFA0D00F6E769 /* PlayersViewController.swift in Sources */,
 				49481DB6227AB5D600AD11F4 /* MenuViewController.swift in Sources */,

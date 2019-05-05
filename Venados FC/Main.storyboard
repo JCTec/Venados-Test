@@ -236,10 +236,10 @@
             </objects>
             <point key="canvasLocation" x="1356.521739130435" y="1161.6847826086957"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Side Menu Navigation Controller-->
         <scene sceneID="CZl-Ax-rlt">
             <objects>
-                <navigationController storyboardIdentifier="LeftMenuNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hVg-LH-gu6" customClass="NavigationController" customModule="Venados_FC" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LeftMenuNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hVg-LH-gu6" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A25-BI-ydj">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -285,22 +285,22 @@
                                             <action selector="didSelectMenu:" destination="UAw-AX-R6A" eventType="touchUpInside" id="KBn-HM-YsK"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SD-e5-5w9" customClass="MenuButton" customModule="Venados_FC" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLy-od-TcW" customClass="MenuButton" customModule="Venados_FC" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55" width="394" height="30"/>
+                                        <state key="normal" title="Estadísticas">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didSelectGames:" destination="UAw-AX-R6A" eventType="touchUpInside" id="yEX-h6-vTJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SD-e5-5w9" customClass="MenuButton" customModule="Venados_FC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="110" width="394" height="30"/>
                                         <state key="normal" title="Jugadores">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="didSelectStatistics:" destination="UAw-AX-R6A" eventType="touchUpInside" id="Uva-Yb-3NO"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLy-od-TcW" customClass="MenuButton" customModule="Venados_FC" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="110" width="394" height="30"/>
-                                        <state key="normal" title="Juegos">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="didSelectGames:" destination="UAw-AX-R6A" eventType="touchUpInside" id="yEX-h6-vTJ"/>
                                         </connections>
                                     </button>
                                 </subviews>

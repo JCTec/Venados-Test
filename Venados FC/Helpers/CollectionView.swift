@@ -11,6 +11,10 @@ import UIKit
 
 extension UICollectionView {
     
+    /// Agrega un mensaje a un CollectionView vacío.
+    ///
+    /// - Parameters:
+    ///   - message: Mensaje a Agregar
     func setEmptyMessage(_ message: String) {
         let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
         messageLabel.text = message
@@ -23,6 +27,7 @@ extension UICollectionView {
         self.backgroundView = messageLabel;
     }
     
+    /// Regresa una CollectionView a su estado original despues de usar setEmptyMessage(_ message: String)
     func restore() {
         self.backgroundView = nil
     }

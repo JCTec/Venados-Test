@@ -9,7 +9,10 @@
 import Foundation
 import UIKit
 
+/// Clase que hereda de UIImageView y aplica setRounded() dejando la imagen redonda.
 class CircleImageView: UIImageView {
+    
+    
     override func awakeFromNib() {
         self.setRounded()
     }

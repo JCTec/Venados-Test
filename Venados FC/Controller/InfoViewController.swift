@@ -83,11 +83,17 @@ class InfoViewController: UIViewController {
         
     }
     
+    /// Asigna self.person.image que contiene un url de imagen a la imagen del jugador.
+    ///
+    ///
     private func setImage(){
         self.setURL(self.person.image, for: self.imagePlayer)
         
     }
     
+    /// Asigna un url de imagen a una UIImage View.
+    ///
+    /// - Parameter URL: URL a Agregar, Viw a la cual agregar la imagen.
     private func setURL(_ url: URL, for view: UIImageView){
         
         view.startAnimating()

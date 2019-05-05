@@ -58,6 +58,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             self.collectionView.addSubview(refreshControl)
         }
         
+        self.refreshControl.beginRefreshing()
+        
         // Do any additional setup after loading the view.
     }
     

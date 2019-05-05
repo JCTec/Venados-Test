@@ -17,10 +17,18 @@ class Statistics {
     
     private var statistics = [Statistic]()
     
+    /// Regresa las estadisticas del Singleton.
+    ///
+    /// - Returns: Arreglo de Statistic.
     func getStatistics() -> [Statistic]{
         return self.statistics
     }
     
+    /// Actualiza el Singleton.
+    ///
+    /// - Parameters:
+    ///   - order: Los datos se guardan en orden.
+    ///   - completed: Completition Block.
     func refresh(completed: @escaping (Result<[Statistic], Error>) -> ()){
         
         let urlStr = "\(Base_URL)/api/statistics"

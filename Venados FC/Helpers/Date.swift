@@ -10,6 +10,7 @@ import Foundation
 
 extension Date {
     
+    /// Meses del año
     var months: [String] {
         return [
             "Enero",
@@ -27,14 +28,19 @@ extension Date {
         ]
     }
     
+    /// Valor Entero del mes de la fecha del objeto.
     var monthInt: Int {
         return Calendar.current.component(.month,  from: self)
     }
     
+    /// String del mes de la fecha del objeto.
     var month: String {
         return self.months[self.monthInt]
     }
         
+    /// Regresa un String con el formato "yyyy-MM-dd'T'HH:mm:ssZ" de la fecha del objeto.
+    ///
+    /// - Returns: String
     func getProfessionalString()-> String{
         let formatter: DateFormatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
@@ -43,6 +49,9 @@ extension Date {
         return formatter.string(from: self)
     }
     
+    /// Regresa un String con el formato "dd MMMM YY" de la fecha del objeto.
+    ///
+    /// - Returns: String
     func getDisplayDate()-> String{
         let formatter: DateFormatter = DateFormatter()
         formatter.dateFormat = "dd MMMM YY"
@@ -51,6 +60,9 @@ extension Date {
         return formatter.string(from: self)
     }
     
+    /// Regresa en día de la semana EEEE en Español.
+    ///
+    /// - Returns: String.
     func dayOfTheWeek() -> String? {
         let weekdays = [
             "Domingo",
@@ -65,12 +77,18 @@ extension Date {
         return weekdays[self.getIntOfTheWeak() - 1]
     }
     
+    /// Regresa el valor Entero del dia de la Semana.
+    ///
+    /// - Returns: Int.
     func getIntOfTheWeak() -> Int! {
         let myCalendar = Calendar(identifier: .gregorian)
         let weekDay = myCalendar.component(.weekday, from: self)
         return weekDay
     }
     
+    /// Regresa un String con el formato "dd \n EEEE" de la fecha del objeto.
+    ///
+    /// - Returns: String.
     func getVenadosDate()-> String{
         var str = ""
         let formatter: DateFormatter = DateFormatter()
@@ -86,6 +104,9 @@ extension Date {
         return str
     }
     
+    /// Regresa un String con el formato "EEEE" de la fecha del objeto.
+    ///
+    /// - Returns: String.
     func dayOfTheWeekOld() -> String? {
         let formatter: DateFormatter = DateFormatter()
         formatter.dateFormat = "EEEE"
@@ -94,14 +115,11 @@ extension Date {
         return formatter.string(from: self)
     }
     
-    func RFC3339()-> String{
-        let formatter: DateFormatter = DateFormatter()
-        formatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZ"
-        formatter.locale = Locale.current
-        formatter.timeZone = TimeZone(identifier: TimeZone.current.identifier)
-        return formatter.string(from: self)
-    }
     
+    /// Regresa un Objeto Date de una cadena con formato "yyyy-MM-dd'T'HH:mm:ssZ".
+    ///
+    /// - Parameter str: String
+    /// - Returns: Date
     static func getFromProfessional(str: String!)-> Date{
         let formatter: DateFormatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"

@@ -15,7 +15,6 @@ class ContainerViewController: UIViewController, MenuViewControllerDelegate {
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var homeButton: UIButton!
     
-        
     fileprivate func add(asChildViewController viewController: UIViewController) {
         // Add Child View as Subview
         self.container.addSubview(viewController.view)

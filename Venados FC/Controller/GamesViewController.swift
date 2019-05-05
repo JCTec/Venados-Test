@@ -42,6 +42,8 @@ class GamesViewController: UIViewController, UITableViewDelegate, UITableViewDat
             self.tableView.addSubview(refreshControl)
         }
         
+        self.refreshControl.beginRefreshing()
+
         // Do any additional setup after loading the view.
     }
     

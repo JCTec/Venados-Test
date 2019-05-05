@@ -8,7 +8,11 @@
 
 import Foundation
 
+//URL base usado en todos los modelos
 let Base_URL = "https://venados.dacodes.mx"
+
+
+//----------------Player-------------------------
 
 struct playerRequest: Decodable{
     var success: Bool!
@@ -37,6 +41,11 @@ struct Person: Decodable{
     var role_short: String!
 }
 
+//-----------------------------------------------
+//-------------------Estadísticas----------------
+
+
+/// Team s una clase que guarda los entrenadores, porteros, centros, defensas y delanteros
 class Team: Decodable{
     var coaches: [Person]
     var goalkeepers: [Person]
@@ -62,6 +71,10 @@ class Team: Decodable{
         self.forwards.removeAll()
     }
     
+    /// Convierte la clase Team en una matris de 5.
+    ///
+    /// - Parameter index: Que arreglo quieres acceder.
+    /// - Returns: El arreglo de Personas
     func get(section index: Int) -> [Person]{
         
         switch index {
@@ -113,6 +126,10 @@ struct Statistic: Decodable{
     
 }
 
+//-----------------------------------------------
+//------------------Juegos-----------------------
+
+
 struct gamesRequest: Decodable {
     var success: Bool!
     var data: data!
@@ -133,3 +150,5 @@ struct data: Decodable{
     var games: [Game]
     var code: Int!
 }
+
+//-----------------------------------------------

@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 
 extension UIViewController {
+    /// Presenta un UIViewController por mdeio de otro UIViewController
+    ///
+    /// - Parameters:
+    ///   - vc: UIViewController a agregar
+    ///   - animated: Sera Animado o No?
     func present(view vc: UIViewController, animated: Bool!){
         self.present(vc, animated: animated, completion: nil)
     }

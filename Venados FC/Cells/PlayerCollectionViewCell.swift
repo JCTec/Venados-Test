@@ -22,11 +22,17 @@ class PlayerCollectionViewCell: UICollectionViewCell {
         self.imagePlayer.backgroundColor = UIColor.Venados.Green.light
     }
     
+    /// Asigna un url de imagen a la imagen del jugador.
+    ///
+    /// - Parameter URL: URL a Agregar.
     func setImage(with URL: URL){
         self.setURL(URL, for: self.imagePlayer)
         self.imagePlayer.backgroundColor = UIColor.clear
     }
     
+    /// Asigna un url de imagen a una UIImage View.
+    ///
+    /// - Parameter URL: URL a Agregar, Viw a la cual agregar la imagen.
     private func setURL(_ url: URL, for view: UIImageView){
         
         view.startAnimating()
