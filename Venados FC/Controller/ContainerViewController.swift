@@ -40,6 +40,8 @@ class ContainerViewController: UIViewController, MenuViewControllerDelegate {
         // Instantiate View Controller
         var viewController = storyboard.instantiateViewController(withIdentifier: "home") as! HomeViewController
         
+        viewController.containerController = self
+        
         self.add(asChildViewController: viewController)
 
        return viewController
@@ -82,7 +84,14 @@ class ContainerViewController: UIViewController, MenuViewControllerDelegate {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
+        self.container.bringSubviewToFront(self.menuVC.view)
+        self.menuVC.setUpViews()
         SideMenuManager.default.menuAddPanGestureToPresent(toView: self.homeButton)
         SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.edge)
     }

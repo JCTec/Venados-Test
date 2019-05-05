@@ -14,6 +14,7 @@
 		4912C35E227BD4FE002F48C2 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912C35D227BD4FE002F48C2 /* Structs.swift */; };
 		4912C360227BD63F002F48C2 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912C35F227BD63F002F48C2 /* Statistics.swift */; };
 		4912C363227BE942002F48C2 /* PositionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912C362227BE942002F48C2 /* PositionTableViewCell.swift */; };
+		49273894227E695500D98AD5 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49273893227E695500D98AD5 /* Events.swift */; };
 		493F2D1A227B4DFD001B2FA8 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493F2D19227B4DFD001B2FA8 /* ContainerViewController.swift */; };
 		49481D6E227A7CC600AD11F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49481D6D227A7CC600AD11F4 /* AppDelegate.swift */; };
 		49481D76227A7CC600AD11F4 /* Venados_FC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49481D74227A7CC600AD11F4 /* Venados_FC.xcdatamodeld */; };
@@ -72,6 +73,7 @@
 		4912C35D227BD4FE002F48C2 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		4912C35F227BD63F002F48C2 /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		4912C362227BE942002F48C2 /* PositionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionTableViewCell.swift; sourceTree = "<group>"; };
+		49273893227E695500D98AD5 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		493F2D19227B4DFD001B2FA8 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		49481D6A227A7CC600AD11F4 /* Venados FC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Venados FC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49481D6D227A7CC600AD11F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		4912C361227BE3F6002F48C2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				49273893227E695500D98AD5 /* Events.swift */,
 				4907F861227B7AE500818865 /* Game.swift */,
 				4912C35F227BD63F002F48C2 /* Statistics.swift */,
 				49CE7216227CEAAE00B247C4 /* Player.swift */,
@@ -508,6 +511,7 @@
 				49CE7213227CCDFD00B247C4 /* UIColor.swift in Sources */,
 				49CE7215227CD8DD00B247C4 /* UIView.swift in Sources */,
 				49481DAC227A971800AD11F4 /* HomeViewController.swift in Sources */,
+				49273894227E695500D98AD5 /* Events.swift in Sources */,
 				497DB399227D376D004A1828 /* TableView.swift in Sources */,
 				49CE7217227CEAAE00B247C4 /* Player.swift in Sources */,
 				4907F85D227B687200818865 /* GameCollectionViewCell.swift in Sources */,

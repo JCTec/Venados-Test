@@ -17,14 +17,32 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var copaMXView: UIView!
     
     var games: Dictionary<String, [Game]>!
+    
+    var containerController: ContainerViewController!
 
     private let gameCellID = "gameCell"
+    
+    
+    private let testData: Dictionary<String, [Game]> = [
+        "Enero": [
+            Game(local: true, opponent: "Mis Venados", opponent_image: URL(string: "https://via.placeholder.com/150"), datetime: Date().getDate(plus: 3600).getProfessionalString(), league: "copa_mx", image: "https://via.placeholder.com/150", home_score: 2, away_score: 0),
+            Game(local: true, opponent: "Mis Venados", opponent_image: URL(string: "https://via.placeholder.com/150"), datetime: Date().getDate(plus: 3600).getProfessionalString(), league: "copa_mx", image: "https://via.placeholder.com/150", home_score: 2, away_score: 0),
+            Game(local: true, opponent: "Mis Venados", opponent_image: URL(string: "https://via.placeholder.com/150"), datetime: Date().getDate(plus: 3600).getProfessionalString(), league: "copa_mx", image: "https://via.placeholder.com/150", home_score: 2, away_score: 0)
+        ],
+        "Mayo": [
+            Game(local: true, opponent: "Mis Venados", opponent_image: URL(string: "https://via.placeholder.com/150"), datetime: Date().getDate(plus: 3600).getProfessionalString(), league: "copa_mx", image: "https://via.placeholder.com/150", home_score: 2, away_score: 0),
+            Game(local: true, opponent: "Mis Venados", opponent_image: URL(string: "https://via.placeholder.com/150"), datetime: Date().getDate(plus: 3600).getProfessionalString(), league: "copa_mx", image: "https://via.placeholder.com/150", home_score: 2, away_score: 0),
+            Game(local: true, opponent: "Mis Venados", opponent_image: URL(string: "https://via.placeholder.com/150"), datetime: Date().getDate(plus: 3600).getProfessionalString(), league: "copa_mx", image: "https://via.placeholder.com/150", home_score: 2, away_score: 0)
+        ]
+    ]
     
     private let refreshControl = UIRefreshControl()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    func setUpViews(){
         self.copaMXView.addBorders(edges: [.bottom, .top, .left], color: UIColor.Venados.black, inset: 0.0, thickness: 1.0)
         
         self.ascensoMXView.addBorders(edges: .all, color: UIColor.Venados.black, inset: 0.0, thickness: 1.0)
@@ -59,8 +77,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
         
         self.refreshControl.beginRefreshing()
-        
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -78,7 +94,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 case .success( _):
                     print("Success")
                     self.games.removeAll()
-                    self.games = GameManager.sharedInstance.getGamesInOrder()
+                    self.games = self.testData
+                    //self.games = GameManager.sharedInstance.getGamesInOrder()
                     DispatchQueue.main.async {
                         self.collectionView.reloadData()
                         self.refreshControl.endRefreshing()
@@ -108,7 +125,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.gameCellID, for: indexPath) as! GameCollectionViewCell
         
-        cell.setValues(for: self.games.getGamesFrom(index: indexPath.section)[indexPath.row])
+        let game = self.games.getGamesFrom(index: indexPath.section)[indexPath.row]
+        
+        cell.game = game
+        cell.parent = self.containerController
+        cell.setValues(for: game)
                 
         return cell
     }

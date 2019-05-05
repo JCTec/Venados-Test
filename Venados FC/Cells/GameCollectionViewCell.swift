@@ -21,9 +21,36 @@ class GameCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var rightTeamImage: UIImageView!
     @IBOutlet weak var rightLabel: UILabel!
     
+    var game: Game?
+    
+    var parent: ContainerViewController?
+    
     override func awakeFromNib() {
         self.calendarImage.tintColor = UIColor.white
-
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.eventCreator))
+        
+        self.calendarImage.clipsToBounds = true
+        self.calendarImage.isUserInteractionEnabled = true
+        self.calendarImage.addGestureRecognizer(tap)
+    }
+    
+    @objc func eventCreator(){
+        var tittle = ""
+        
+        if(self.game != nil){
+            
+        }
+        
+        if(self.game!.local){
+            tittle = "Partido: Venados F.C. - \(self.game?.opponent ?? " ")"
+        }else{
+            tittle = "Partido: \(self.game?.opponent ?? " ") - Venados F.C."
+        }
+        
+        let date = Date.getFromProfessional(str: self.game?.datetime)
+        
+        EventManager.createEvent(tittle, startDate: date, endDate: date.getDate(plus: 90.0), view: self.parent)
+        
     }
     
     /// Asigna el juego a sus etiquetas correspondientes.

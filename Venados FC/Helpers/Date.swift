@@ -37,6 +37,15 @@ extension Date {
     var month: String {
         return self.months[self.monthInt]
     }
+    
+    /// Obtenga la fecha más la cantidad de minutos.
+    ///
+    /// - Parameter min: Minutos a agregar.
+    /// - Returns: Date Object.
+    func getDate(plus min: Double) -> Date{
+        let date = self.addingTimeInterval(min * 60.0)
+        return date
+    }
         
     /// Regresa un String con el formato "yyyy-MM-dd'T'HH:mm:ssZ" de la fecha del objeto.
     ///
