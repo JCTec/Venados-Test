@@ -90,10 +90,10 @@ class ContainerViewController: UIViewController, MenuViewControllerDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.container.bringSubviewToFront(self.menuVC.view)
-        self.menuVC.setUpViews()
         SideMenuManager.default.menuAddPanGestureToPresent(toView: self.homeButton)
         SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.edge)
+        
+        self.menuVC.containerController = self
     }
     
     func didSelectMenu() {

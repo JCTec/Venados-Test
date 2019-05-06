@@ -35,21 +35,22 @@ class GameCollectionViewCell: UICollectionViewCell {
     }
     
     @objc func eventCreator(){
-        var tittle = ""
         
         if(self.game != nil){
+            var tittle = ""
+
+            if(self.game!.local){
+                tittle = "Partido: Venados F.C. - \(self.game?.opponent ?? " ")"
+            }else{
+                tittle = "Partido: \(self.game?.opponent ?? " ") - Venados F.C."
+            }
             
-        }
-        
-        if(self.game!.local){
-            tittle = "Partido: Venados F.C. - \(self.game?.opponent ?? " ")"
+            let date = Date.getFromProfessional(str: self.game?.datetime)
+            
+            EventManager.createEvent(tittle, startDate: date, endDate: date.getDate(plus: 90.0), view: self.parent)
         }else{
-            tittle = "Partido: \(self.game?.opponent ?? " ") - Venados F.C."
+            print("Error: Game no puede ser nil al crear un evento.")
         }
-        
-        let date = Date.getFromProfessional(str: self.game?.datetime)
-        
-        EventManager.createEvent(tittle, startDate: date, endDate: date.getDate(plus: 90.0), view: self.parent)
         
     }
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -40,6 +41,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setUpViews()
     }
     
     func setUpViews(){
