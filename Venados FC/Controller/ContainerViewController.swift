@@ -34,16 +34,11 @@ class ContainerViewController: UIViewController, MenuViewControllerDelegate {
         return viewController
     }()
     
-    private lazy var menuVC: HomeViewController! = {
+    private var menuVC: HomeViewController! = {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         
         // Instantiate View Controller
         var viewController = storyboard.instantiateViewController(withIdentifier: "home") as! HomeViewController
-        
-        viewController.containerController = self
-        
-        self.add(asChildViewController: viewController)
-
        return viewController
     }()
     
@@ -81,6 +76,9 @@ class ContainerViewController: UIViewController, MenuViewControllerDelegate {
         // (Optional) Prevent status bar area from turning black when menu appears:
         SideMenuManager.default.menuFadeStatusBar = false
         
+        self.setDelegate()
+
+        
         // Do any additional setup after loading the view.
     }
     
@@ -94,6 +92,7 @@ class ContainerViewController: UIViewController, MenuViewControllerDelegate {
         SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.edge)
         
         self.menuVC.containerController = self
+        self.add(asChildViewController: self.menuVC)
     }
     
     func didSelectMenu() {
@@ -115,10 +114,17 @@ class ContainerViewController: UIViewController, MenuViewControllerDelegate {
         self.container.bringSubviewToFront(self.statisticsVC.view)
     }
     
+    func setDelegate(){
+        let home = (self.menuLeftNavigationController.topViewController as! MenuViewController)
+        
+        home.delegate = self
+    }
+    
     @IBAction func didSelectHomeButton(_ sender: Any) {
-        (SideMenuManager.default.menuLeftNavigationController!.topViewController as! MenuViewController).delegate = self
+        
+        self.setDelegate()
 
-        self.present(SideMenuManager.default.menuLeftNavigationController!, animated: true, completion: nil)
+        self.present(self.menuLeftNavigationController, animated: true, completion: nil)
         
     }
     

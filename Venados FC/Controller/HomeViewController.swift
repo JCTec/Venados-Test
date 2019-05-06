@@ -11,6 +11,10 @@ import SideMenu
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    @IBOutlet weak var venadosImage: UIImageView!
+    @IBOutlet weak var lowerConstraint: NSLayoutConstraint!
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    @IBOutlet weak var height: NSLayoutConstraint!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var copaMXB: UIButton!
     @IBOutlet weak var ascensoMXB: UIButton!
@@ -22,7 +26,24 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     var containerController: ContainerViewController!
 
     private let gameCellID = "gameCell"
+    private var loding = true
+    private var startAutoFocus = false
     
+    private lazy var indicator : UIActivityIndicatorView = {
+        let loading = UIActivityIndicatorView(style: .whiteLarge)
+        
+        loading.sizeToFit()
+        loading.color = UIColor.white
+        loading.style = .whiteLarge
+        loading.hidesWhenStopped = true
+        
+        loading.center = self.collectionView.center
+        
+        self.collectionView.backgroundView = loading
+        self.collectionView.bringSubviewToFront(loading)
+        
+        return loading
+    }()
     
     private let testData: Dictionary<String, [Game]> = [
         "Enero": [
@@ -42,6 +63,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpViews()
+        self.setNormal()
     }
     
     func setUpViews(){
@@ -56,33 +78,30 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
-        
+        self.collectionView.bounces = true
+        self.collectionView.contentOffset = CGPoint.zero
+
         let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout
         layout?.sectionHeadersPinToVisibleBounds = true
         
         self.refreshControl.addTarget(self, action: #selector(self.reload), for: .valueChanged)
         
         let strokeTextAttributes: [NSAttributedString.Key: Any] = [
-            .strokeColor : UIColor.black,
-            .foregroundColor : UIColor.black,
-            .strokeWidth : -2.0,
-            .font : UIFont.boldSystemFont(ofSize: 18)
+            .strokeColor : UIColor.white,
+            .foregroundColor : UIColor.white,
+            .strokeWidth : 0.0,
+            .font : UIFont.boldSystemFont(ofSize: 20)
         ]
         
         self.refreshControl.tintColor = UIColor.white
         self.refreshControl.attributedTitle = NSAttributedString(string: "Descargando Partidos...", attributes: strokeTextAttributes)
         
-        if #available(iOS 10.0, *) {
-            self.collectionView.refreshControl = refreshControl
-        } else {
-            self.collectionView.addSubview(refreshControl)
-        }
+        self.collectionView.refreshControl = refreshControl
         
-        self.refreshControl.beginRefreshing()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.reload()
+        self.reload(true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -90,7 +109,16 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
-    @objc func reload(){
+    @objc func reload(_ first: Bool){
+        self.startAutoFocus = false
+        self.setNormal()
+        self.loding = true
+        self.collectionView.restore()
+        
+        if(first){
+            self.indicator.startAnimating()
+        }
+        
         GameManager.sharedInstance.refresh(order: true) { (result) in
             switch result {
                 case .success( _):
@@ -99,8 +127,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     self.games = self.testData
                     //self.games = GameManager.sharedInstance.getGamesInOrder()
                     DispatchQueue.main.async {
+                        self.loding = false
                         self.collectionView.reloadData()
                         self.refreshControl.endRefreshing()
+                        self.startAutoFocus = true
+                        self.indicator.stopAnimating()
+                        self.collectionView.contentOffset = CGPoint.zero
+
                     }
 
                 case .failure(let error):
@@ -121,8 +154,50 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         return headerView!
     }
-
     
+    func setNormal(){
+        self.topConstraint.constant = 50.0
+        self.lowerConstraint.constant = 50.0
+        self.height.constant = 150.0
+    }
+    
+    func consMinus(_ value: CGFloat, slowerBy: CGFloat){
+        
+        if(self.startAutoFocus){
+            
+            let valueToUse: CGFloat = (value * slowerBy)
+            
+            self.topConstraint.constant = CGFloat(50.0).minusOrZero(valueToUse)
+            self.lowerConstraint.constant = CGFloat(50.0).minusOrZero(valueToUse)
+            
+            self.height.constant = CGFloat(150.0).minusOrZero(valueToUse)
+            
+            self.view.layoutIfNeeded()
+        }
+        
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset.y)
+        
+        if(scrollView.contentOffset.y >= 0.0){
+            self.consMinus(scrollView.contentOffset.y, slowerBy: 0.5)
+        }
+        
+    }
+    
+    func refresh (sender:AnyObject)
+    {
+        print("Refresh")
+    }
+    
+    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
+        print("TOP")
+        print(scrollView.contentOffset.y)
+        
+        self.setNormal()
+    }
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.gameCellID, for: indexPath) as! GameCollectionViewCell
@@ -138,17 +213,18 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
-        if(self.games.count == 0){
-            self.collectionView.setEmptyMessage("No hay partidos que mostrar :(")
-        }else{
-            self.collectionView.restore()
+        if(!self.loding){
+            if(self.games.count == 0){
+                self.collectionView.setEmptyMessage("No hay partidos que mostrar :(")
+            }else{
+                self.collectionView.restore()
+            }
         }
-        
+                
         return self.games.count
     }
 
 }
-
 
 
 

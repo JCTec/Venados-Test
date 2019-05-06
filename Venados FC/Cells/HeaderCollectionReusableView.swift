@@ -15,6 +15,7 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     override func awakeFromNib() {
         NSLayoutConstraint.activate([
                 self.month.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10.0),
+                self.month.heightAnchor.constraint(equalToConstant: 5.0),
                 self.topAnchor.constraint(equalTo: self.month.topAnchor, constant: 0.0),
                 self.bottomAnchor.constraint(equalTo: self.month.bottomAnchor, constant: 0.0)
             

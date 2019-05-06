@@ -36,16 +36,19 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func didSelectMenu(_ sender: Any) {
+        print("didSelectMenu")
         self.delegate?.didSelectMenu()
 
     }
     
     @IBAction func didSelectStatistics(_ sender: Any) {
+        print("didSelectStatistics")
         self.delegate?.didSelectStatistics()
 
     }
     
     @IBAction func didSelectGames(_ sender: Any) {
+        print("didSelectGames")
         self.delegate?.didSelectGames()
 
     }
