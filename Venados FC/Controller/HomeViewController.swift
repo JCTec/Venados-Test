@@ -24,6 +24,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     var games: Dictionary<String, [Game]>!
     
     var containerController: ContainerViewController!
+    
+    var copa = "Copa MX"
 
     private let gameCellID = "gameCell"
     private var loding = true
@@ -45,18 +47,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return loading
     }()
     
-    private let testData: Dictionary<String, [Game]> = [
-        "Enero": [
-            Game(local: true, opponent: "Mis Venados", opponent_image: URL(string: "https://via.placeholder.com/150"), datetime: Date().getDate(plus: 3600).getProfessionalString(), league: "copa_mx", image: "https://via.placeholder.com/150", home_score: 2, away_score: 0),
-            Game(local: true, opponent: "Mis Venados", opponent_image: URL(string: "https://via.placeholder.com/150"), datetime: Date().getDate(plus: 3600).getProfessionalString(), league: "copa_mx", image: "https://via.placeholder.com/150", home_score: 2, away_score: 0),
-            Game(local: true, opponent: "Mis Venados", opponent_image: URL(string: "https://via.placeholder.com/150"), datetime: Date().getDate(plus: 3600).getProfessionalString(), league: "copa_mx", image: "https://via.placeholder.com/150", home_score: 2, away_score: 0)
-        ],
-        "Mayo": [
-            Game(local: true, opponent: "Mis Venados", opponent_image: URL(string: "https://via.placeholder.com/150"), datetime: Date().getDate(plus: 3600).getProfessionalString(), league: "copa_mx", image: "https://via.placeholder.com/150", home_score: 2, away_score: 0),
-            Game(local: true, opponent: "Mis Venados", opponent_image: URL(string: "https://via.placeholder.com/150"), datetime: Date().getDate(plus: 3600).getProfessionalString(), league: "copa_mx", image: "https://via.placeholder.com/150", home_score: 2, away_score: 0),
-            Game(local: true, opponent: "Mis Venados", opponent_image: URL(string: "https://via.placeholder.com/150"), datetime: Date().getDate(plus: 3600).getProfessionalString(), league: "copa_mx", image: "https://via.placeholder.com/150", home_score: 2, away_score: 0)
-        ]
-    ]
+    private var safeData = Dictionary<String, [Game]>()
     
     private let refreshControl = UIRefreshControl()
 
@@ -109,7 +100,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
-    @objc func reload(_ first: Bool){
+    @objc func reload(_ first: Bool = false){
         self.startAutoFocus = false
         self.setNormal()
         self.loding = true
@@ -124,16 +115,21 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 case .success( _):
                     print("Success")
                     self.games.removeAll()
-                    self.games = self.testData
-                    //self.games = GameManager.sharedInstance.getGamesInOrder()
+                    self.safeData.removeAll()
+                    self.safeData = GameManager.sharedInstance.getGamesInOrder()
+                    self.games = self.safeData.just(self.copa)
+                    
                     DispatchQueue.main.async {
                         self.loding = false
                         self.collectionView.reloadData()
-                        self.refreshControl.endRefreshing()
                         self.startAutoFocus = true
-                        self.indicator.stopAnimating()
                         self.collectionView.contentOffset = CGPoint.zero
-
+                        if(!first){
+                            self.refreshControl.endRefreshing()
+                        }else{
+                            self.indicator.stopAnimating()
+                        }
+                        
                     }
 
                 case .failure(let error):
@@ -224,6 +220,21 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return self.games.count
     }
 
+    @IBAction func didSelectCopaMX(_ sender: Any) {
+        self.copa = "Copa MX"
+        self.reloadLocal()
+
+    }
+    
+    @IBAction func didSelectAscenso(_ sender: Any) {
+        self.copa = "Ascenso MX"
+        self.reloadLocal()
+    }
+    
+    func reloadLocal(){
+        self.games = self.safeData.just(self.copa)
+        self.collectionView.reloadData()
+    }
 }
 
 

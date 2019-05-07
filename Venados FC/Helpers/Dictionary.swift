@@ -33,4 +33,34 @@ extension Dictionary {
     func getIntFrom(index i:Int) -> Int{
         return self[Array(self.keys)[i]] as! Int
     }
+    
+    /// Limpia el request dejando solo los de la liga deseada
+    ///
+    /// - Parameter str: Liga a elegir.
+    /// - Returns: Dictionario filtrado.
+    func just(_ str: String) -> Dictionary<String, [Game]>{
+        
+        var dic: Dictionary<String, [Game]> = Dictionary<String, [Game]>()
+        
+        for (key , value) in self{
+            
+            if let data = value as? [Game] {
+                
+                guard let keyToUse = key as? String else { break }
+
+                var newArray = [Game]()
+                
+                for game in data{
+                    if game.league == str {
+                        newArray.append(game)
+                    }
+                }
+                
+                dic[keyToUse] = newArray
+            }
+            
+        }
+        
+        return dic
+    }
 }

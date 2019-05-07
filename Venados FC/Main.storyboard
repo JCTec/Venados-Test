@@ -670,6 +670,9 @@
                                                         <state key="normal" title="Copa MX">
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="didSelectCopaMX:" destination="ooW-YE-oPM" eventType="touchUpInside" id="Bye-NX-7Lf"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -687,6 +690,9 @@
                                                         <state key="normal" title="Ascenso MX">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="didSelectAscenso:" destination="ooW-YE-oPM" eventType="touchUpInside" id="UEN-CU-iaX"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
