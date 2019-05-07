@@ -69,7 +69,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
-        self.collectionView.bounces = true
+        self.collectionView.bounces = false
         self.collectionView.contentOffset = CGPoint.zero
 
         let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout
