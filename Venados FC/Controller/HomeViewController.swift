@@ -89,6 +89,14 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         self.collectionView.refreshControl = refreshControl
         
+        let copaMX = UITapGestureRecognizer(target: self, action: #selector(self.copaMX))
+        let ascenso = UITapGestureRecognizer(target: self, action: #selector(self.ascenso))
+
+        self.copaMXView.isUserInteractionEnabled = true
+        self.copaMXView.addGestureRecognizer(copaMX)
+        
+        self.ascensoMXView.isUserInteractionEnabled = true
+        self.ascensoMXView.addGestureRecognizer(ascenso)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -221,13 +229,21 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
 
     @IBAction func didSelectCopaMX(_ sender: Any) {
-        self.copa = "Copa MX"
-        self.reloadLocal()
+        self.copaMX()
 
     }
     
     @IBAction func didSelectAscenso(_ sender: Any) {
+        self.ascenso()
+    }
+    
+    @objc func ascenso(){
         self.copa = "Ascenso MX"
+        self.reloadLocal()
+    }
+    
+    @objc func copaMX(){
+        self.copa = "Copa MX"
         self.reloadLocal()
     }
     
